@@ -1,0 +1,4 @@
+<resources>
+    <item name="fullscreen_id" type="id"/>
+    <item name="tiny_id" type="id"/>
+</resources>

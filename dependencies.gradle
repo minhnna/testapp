@@ -1,0 +1,68 @@
+ext {
+    def versionEspresso             = '2.2.2'
+    def versionJUnit                = '4.12'
+    def versionGlide                = '3.8.0'
+    def versionAndroidSupport       = '25.3.1'
+    def versionRetrofit             = '2.3.0'
+    def versionGSon                 = '2.8.1'
+    def versionSdp                  = '1.0.4'
+
+    //---------------------------------------------------- Libs --------------------------------------------------------------//
+    def libsTest = [
+            espressoCore: [group: 'com.android.support.test.espresso', name: 'espresso-core', version: versionEspresso],
+            junit       : [group: 'junit', name: 'junit', version: versionJUnit]
+    ]
+
+    def libsSupport = [
+            appCompat     : [group: 'com.android.support', name: 'appcompat-v7', version: versionAndroidSupport],
+            design        : [group: 'com.android.support', name: 'design', version: versionAndroidSupport],
+            supportV4     : [group: 'com.android.support', name: 'support-v4', version: versionAndroidSupport],
+            recyclerviewV7: [group: 'com.android.support', name: 'recyclerview-v7', version: versionAndroidSupport]
+    ]
+
+
+    def libsThirdParty = [
+            retrofit       : [group: 'com.squareup.retrofit2', name: 'retrofit', version: versionRetrofit],
+            convertGson    : [group: 'com.squareup.retrofit2', name: 'converter-gson', version: versionRetrofit],
+            gson           : [group: 'com.google.code.gson', name: 'gson', version: versionGSon],
+            glide          : [group: 'com.github.bumptech.glide', name: 'glide', version: versionGlide],
+            sdp            : [group: 'com.intuit.sdp', name: 'sdp-android', version: versionSdp]
+    ]
+
+    //---------------------------------------------------- Modules ------------------------------------------------------------//
+    def modules = [
+            app      : ':app'
+    ]
+
+    // Module Dependencies
+    def supportAnnotationsExclude = {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+
+    //---------------------------------------------------- Add to Modules ------------------------------------------------------//
+
+    appModuleDependencies = [
+            // Unit Test
+            [configuration: "testCompile", dependency: libsTest.junit],
+
+            // Android Test
+            [configuration: "androidTestCompile", dependency: libsTest.espressoCore,
+             options      : supportAnnotationsExclude],
+
+            [configuration: "compile", dependency: libsSupport.appCompat],
+            [configuration: "compile", dependency: libsSupport.design],
+            [configuration: "compile", dependency: libsSupport.supportV4],
+            [configuration: "compile", dependency: libsSupport.recyclerviewV7],
+
+            [configuration: "compile", dependency: libsThirdParty.retrofit],
+            [configuration: "compile", dependency: libsThirdParty.convertGson],
+            [configuration: "compile", dependency: libsThirdParty.gson],
+            [configuration: "compile", dependency: libsThirdParty.glide,
+             options      : supportAnnotationsExclude],
+            [configuration: "compile", dependency: libsThirdParty.sdp]
+    ]
+
+    indicatorModuleDependecies = [
+            [configuration: "compile", dependency: libsSupport.supportV4]
+    ]
+}

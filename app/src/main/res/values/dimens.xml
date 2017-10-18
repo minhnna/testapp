@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="space_extreme_larger">40dp</dimen>
+    <dimen name="space_extreme_large">32dp</dimen>
+    <dimen name="space_huge">24dp</dimen>
+    <dimen name="space_largest">20dp</dimen>
+    <dimen name="space_larger">16dp</dimen>
+    <dimen name="space_large">14dp</dimen>
+    <dimen name="space_medium">12dp</dimen>
+    <dimen name="space_normal">10dp</dimen>
+    <dimen name="space_small">8dp</dimen>
+    <dimen name="space_smaller">6dp</dimen>
+    <dimen name="space_smallest">4dp</dimen>
+    <dimen name="space_micro">2dp</dimen>
+
+    <dimen name="text_size_huge">24sp</dimen>
+    <dimen name="text_size_larger">20sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_default">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_micro">10sp</dimen>
+
+    <dimen name="corner_circle">50dp</dimen>
+    <dimen name="corner_larger">14dp</dimen>
+    <dimen name="corner_large">10dp</dimen>
+    <dimen name="corner_normal">8dp</dimen>
+    <dimen name="corner_small">6dp</dimen>
+    <dimen name="corner_smaller">4dp</dimen>
+    <dimen name="corner_smallest">2dp</dimen>
+
+    <dimen name="button_height">58dp</dimen>
+    <dimen name="button_height_small">52dp</dimen>
+    <dimen name="button_height_smaller">46dp</dimen>
+    <dimen name="button_height_smallest">40dp</dimen>
+
+    <!-- Video player dimen -->
+    <dimen name="start_button_w_h_normal">45dp</dimen>
+    <dimen name="start_button_w_h_fullscreen">62dp</dimen>
+
+</resources>
